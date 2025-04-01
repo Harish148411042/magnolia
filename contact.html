@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+    <header>
+        <nav class="nav__bar">
+            <div class="logo">
+              <img src="image/magnolia logo.png" alt="Magnolia Logo" class="logo__image">
+            </div>
+            <ul class="navbar">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="service.html">Service</a></li>
+              <li><a href="doctor.html">Doctor</a></li>
+              <li><a href="index.html#Book Appointment">Book Appointment</a></li>
+              <li><a href="contact.html">Contact us</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    
+
+    <div class="container">
+        <table>
+            <tr>
+                <td><img src="image/telephone_11714787.png" alt="Phone" class="icon"></td>
+                <td><a href="tel:+917337637433">+917337637433</a></td>
+            </tr>
+            <tr>
+                <td><img src="image/telephone_11714787.png" alt="Phone" class="icon"></td>
+                <td><a href="tel:+917676084360">+917676084360</a></td>
+            </tr>
+            <tr>
+                <td><img src="image/vpn_12557418.png" alt="Location" class="icon"></td>
+                <td><a href="https://www.google.com/maps/place/Magnolia+Prime+Healthcare/@12.8690553,77.5294159,808m/data=!3m1!1e3!4m15!1m8!3m7!1s0x3bae4165453f8f9b:0xdeddf304ee6d49cf!2sMagnolia+Prime+Healthcare!8m2!3d12.8690501!4d77.5319908!10e1!16s%2Fg%2F11x1fdtwbf!3m5!1s0x3bae4165453f8f9b:0xdeddf304ee6d49cf!8m2!3d12.8690501!4d77.5319908!16s%2Fg%2F11x1fdtwbf?entry=ttu&g_ep=EgoyMDI1MDMxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">#No.178, 4th Block, Further Extension of Vrushabhavathinagar, Thalaghattapura, Bengaluru-560109</a></td>
+            </tr>
+            <tr>
+                <td><img src="image/minus_16687619.png" alt="Email" class="icon"></td>
+                <td><a href="mailto:magnoliaprime01@gmail.com">magnoliaprime01@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td><img src="image/telephone_11714792.png" alt="WhatsApp" class="icon"></td>
+                <td><a href="https://wa.me/+917337637433?text=I%20want%20to%20book%20an%20appointment" target="_blank">WhatsApp Us</a></td>
+            </tr>
+            <tr>
+                <td><img src="image/communication_15047584.png" alt="Instagram" class="icon"></td>
+                <td><a href="https://www.instagram.com/magnolia.primehealthcare?igsh=MThwd3dhOTY2ZXU2aA==" target="_blank">Instagram</a></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav__bar ul');
+            menu.classList.toggle('show');
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url('image/background.jpg') no-repeat center center/cover;
+            margin: 0;
+            color: #214120;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+        }
+
+        .nav__bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: #214120;
+            padding: 1rem 0.1rem;
+            z-index: 1;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 75px;
+            width: auto;
+        }
+
+        .nav__bar ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            font-family: "Poppins", sans-serif;
+            font-weight: bolder;
+            margin-right: 40px;
+        }
+
+        ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 120px; /* Added space for the fixed navbar */
+            padding: 20px;
+            width: 90%;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            color: #214120;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #214120;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #a8d5ba;
+        }
+        
+        .icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .icon:hover {
+            transform: scale(1.2);
+        }
+
+        /* Hamburger menu styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .hamburger .bar {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 768px) {
+            .nav__bar {
+                flex-direction: row;
+                position: absolute;
+                justify-content: space-between;
+                padding: 20px 0;
+                height: auto; /* Allow the navbar to adjust to the content */
+            }
+            .nav__bar ul {
+            /*transition: transform 0.8s ease;*/
+            position: absolute;
+            top: 90px;
+            width: auto;
+            height: auto;
+            background-color: #214120;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+            .hamburger {
+                display: flex;  /* Show hamburger button in mobile view */
+                margin-right: 25px;
+            }
+
+            .nav__bar ul.show {
+                /*transform: translateX(-100%);*/
+                display: flex;  /* Show the menu when the hamburger is clicked */
+            }
+            .nav__bar ul {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo img {
+                height: 80px;
+            }
+
+            .container {
+                padding: 20px;
+                margin-top: -150px; /* Increased margin for mobile */
+            }
+
+            .icon {
+                width: 35px;
+                height: 35px;
+            }
+
+            td {
+                padding: 8px;
+            }
+
+            .logo h2 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav__bar ul {
+                gap: 0.8rem;
+                padding: 0;
+            }
+
+            .logo h2 {
+                font-size: 20px;
+            }
+
+            .container {
+                margin-top: 30px; /* Adjusted margin for mobile */
+                padding: 5px;
+            }
+
+            .icon {
+                width: 30px;
+                height: 30px;
+            }
+
+            td {
+                font-size: 14px;
+                padding: 6px;
+            }
+        }
+    </style>
+</body>
+</html>

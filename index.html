@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script>
+      function toggleMenu() {
+          const menu = document.querySelector('.nav__bar ul');
+          menu.classList.toggle('show');
+      }
+  </script>
+    <title>MagnoliaPrimeHealthCare</title>
+  </head>
+  <body>
+    <button id="menu__btn" class="menu__btn">
+      <i class="fa fa-bars"></i>
+    </button>
+
+  <nav class="nav__bar">
+    <div class="logo">
+      <img src="image/magnolia logo.png" alt="Magnolia Logo" class="logo__image">
+    </div>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="doctor.html">Doctor</a></li>
+      <li><a href="index.html#Book Appointment">Book Appointment</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+  </div>
+    
+  </nav>  
+    <hr />
+     
+      <section id="Home">
+        <div class="home">
+          <div class="home__first">
+            <h2>Stay Safe, Stay Healthy</h2>
+            <p style="text-align: justify;">
+              Magnolia Prime Health Care offers compassionate and professional home care for people of all ages, ensuring personalized, affordable, and reliable support 
+            </p>
+            <p style="text-align: justify;">
+              Let us help you or your loved ones receive the care they deserve in the comfort of home.
+            </p>
+            
+            <button type="button" onclick="location.href='contact.html'">Contact Now</button>
+          </div>
+      
+          <!-- Image Slider -->
+          <div class="home__slider">
+            <div class="slider">
+              <img src="image/slider3.png" alt="Healthcare Service 1" class="slide active">
+              <img src="image/slider2.png" alt="Healthcare Service 2" class="slide">
+              <img src="image/slider1.png" alt="Healthcare Service 3" class="slide">
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+          </div>
+        </div>
+      </section>
+      
+      
+      <section class="services">
+        <h2 class="services__title">Our Services</h2>
+        <div class="services__slider">
+          
+          <div class="service__item">
+            <img src="image/ASSISTED LIVING.jpg" alt="Assisted Living">
+            <div class="service__content">
+              <h3>Assisted Living</h3><br>
+              <p>Comprehensive support for seniors who need help with daily activities while maintaining independence.</p>
+              <a href="service.html#assisted-living" class="service__btn">Learn More</a>
+            </div>
+          </div>
+      
+          <div class="service__item">
+            <img src="image/NEURO.jpg" alt="Neuro Rehabilitation">
+            <div class="service__content">
+              <h3>Neuro Rehabilitation</h3>
+              <p>Advanced therapies to aid recovery from strokes, spinal injuries and neurological disorders.</p>
+              <br>
+              <a href="service.html#neuro-rehab" class="service__btn">Learn More</a>
+            </div>
+          </div>
+      
+          <div class="service__item">
+            <img src="image/PHYSIOTHERAPY.jpg" alt="Physiotherapy OPD">
+            <div class="service__content">
+              <h3>Physiotherapy OPD</h3>
+              <p>Personalized treatment plans for injury recovery, mobility enhancement and pain relief.</p>
+              <br>
+              <a href="service.html#physiotherapy" class="service__btn">Learn More</a>
+            </div>
+          </div>
+      
+          <div class="service__item">
+            <img src="image/Transitional care.jpg" alt="Transitional Care">
+            <div class="service__content">
+              <h3>Transitional Care</h3><br>
+              <p>Bridging the gap between hospital care and home recovery for a smooth and seamless transition to wellness.</p>
+              <a href="service.html#transitional-care" class="service__btn">Learn More</a>
+            </div>
+          </div>
+          
+          <div class="service__item">
+            <img src="image/Orthopaedic Rehabilitation.jpg" alt="Orthopaedic Rehabilitation">
+            <div class="service__content">
+              <h3>Orthopaedic Rehabilitation</h3>
+              <p>Customized treatments to restore mobility and strength after injuries or surgeries.</p>
+              <br>
+              <a href="service.html#ortho-rehab" class="service__btn">Learn More</a>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+      
+      
+      
+      <section id="About" class="about-section">
+        <div class="about-container">
+          <div class="about-image">
+            <div class="about-image-slider">
+              <img src="image/About1.jpeg" alt="Healthcare Facility1" class="about-slide">
+              <img src="image/About2.jpeg" alt="Healthcare Facility2" class="about-slide">
+              <img src="image/About3.jpeg" alt="Healthcare Facility3" class="about-slide">
+              <img src="image/About4.jpeg" alt="Healthcare Facility4" class="about-slide">
+              <img src="image/About5.jpeg" alt="Healthcare Facility5" class="about-slide">
+            </div>
+              <button class="prev1" onclick="changeSlide1(-1)">&#10094;</button>
+              <button class="next1" onclick="changeSlide1(1)">&#10095;</button>
+          </div>
+          <div class="about-content">
+            <h2 class="fade-in"><span>About</span> Us</h2>
+            <br>
+            <br>
+            <h3 class="slide-in">Magnolia Prime: Caring Like Family, Healing Like Home</h3>
+            <br>
+            <p class="fade-in">
+              Magnolia Prime Health Care offers compassionate services, including comprehensive physiotherapy, advanced neuro-rehabilitation, and personalized medical support. With expert care and a nurturing environment, we help individuals regain strength, mobility, and independence.
+            </p>
+            <p class="fade-in">
+              Healing is about feeling secure and cared for. Magnolia Prime Health Care offers expert rehabilitation and 24/7 medical support in a home-like environment.
+            </p><br>
+            <p>You’re not just a patient—you’re family.</p>
+            <button type="button" class="btn pulse" onclick="location.href='about.html'">Learn More</button>
+  
+          </div>
+        </div>
+      </section>
+  
+  
+      <section id="Doctor">
+        <div class="doctor__title">
+          <h2>Our <span>Doctors</span></h2>
+        </div>
+        <div class="doctor">
+          <div class="doctor__profile">
+            <img src="image/DR SHARATH D HEGDE.jpg" alt="" />
+            <h2>Dr. SHARAT D HEGDE</h2>
+            <p>MBBS, DNB</p>
+            <P>20+ Years of experience</P>
+          </div>
+
+          <div class="doctor__profile">
+            <img src="image/DR PRAVEEN KUMAR.jpg" alt="" />
+            <h2>Dr S.PRAVEEN KUMAR</h2>
+            <p>Neurologist</p>
+            <p>15+ Years of Experience</p>
+          </div>
+
+          <div class="doctor__profile">
+            <img src="image/DR PREETHAM HN.jpg" alt="" />
+            <h2>Dr PREETHAM H N</h2>
+            <p>ENT</p>
+            <p>14+ Years of Experience</p>
+          </div>
+
+        </div>
+      </section>
+  
+      <section id="Book Appointment" class="book-section">
+        <div class="book__title">
+          <h2><span></span><h2>
+        </div>
+        <div class="book">
+          <div class="book__first">
+            <img src="image/booking.jpg" alt="Book Now">
+          </div>
+          <div class="book__second">
+            <h2>Book Appointment</h2>
+            <form id="bookingForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+              
+                <label for="number">Phone Number:</label>
+                <input type="tel" id="number" required>
+              
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+              
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+              
+                <label for="timeSlot">Time Slot:</label>
+                <select id="timeSlot" required>
+                    <option value="">Select a time slot</option>
+                    <!-- Time slots will be dynamically populated here -->
+                  </select>
+              
+                <button type="submit">Book Appointment</button>
+              </form>
+          </div>
+        </div>
+      
+        <!-- Popup Notification -->
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <h3>Appointment Confirmed!</h3>
+            <p>Thank you for booking with us. Conformation message has been sent to your MAIL ID.</p>
+            <button id="closePopupButton" onclick="closePopup()">OK</button>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <section id="Contact">
+          <div class="bottom" style="text-align: justify;">
+            <!-- Quick Links -->
+            <div class="bottom__one">
+              <h2>Quick Links</h2>
+              <ul>
+                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                <li><a href="service.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                <li><a href="about.html"><i class="fas fa-chevron-right"></i> About</a></li>
+                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Doctors</a></li>
+                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Book Appointment</a></li>
+                <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+              </ul>
+            </div>
+      
+            <!-- Our Services -->
+            <div class="bottom__two">
+              <h2>Our Services</h2>
+              <ul>
+                <li><a href="service.html"><i class="fas fa-chevron-right"></i> Physiotherapy</a></li>
+                <li><a href="service.html"><i class="fas fa-chevron-right"></i> Rehabilitation</a></li>
+                <li><a href="service.html"><i class="fas fa-chevron-right"></i> Laboratory Services</a></li>
+                <li><a href="service.html"><i class="fas fa-chevron-right"></i> Elderly Care</a></li>
+                <li><a href="service.html"><i class="fas fa-chevron-right"></i> Sleep Study</a></li>
+                <li><a href="service.html"><i class="fas fa-chevron-right"></i> other services</a></li>
+              </ul>
+            </div>
+      
+            <!-- Contact Information -->
+            <div class="bottom__three">
+              <h2>Contact Information</h2>
+              <ul>
+                <li><a href="tel:+917676084360"><i class="fa-solid fa-phone"></i> +91 7676084360</a></li>
+                <li><a href="tel:+917337637433"><i class="fa-solid fa-phone"></i> +91 7337637433</a></li>
+                <li><a href="mailto:magnoliaprime01@gmail.com"><i class="fa-solid fa-envelope"></i> magnoliaprime01@gmail.com</a></li>
+                <li><a href="https://www.google.com/maps/place/Magnolia+Prime+Healthcare/@12.8690501,77.5294105,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae4165453f8f9b:0xdeddf304ee6d49cf!8m2!3d12.8690501!4d77.5319908!16s%2Fg%2F11x1fdtwbf?entry=ttu&g_ep=EgoyMDI1MDMxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                  <i class="fa-solid fa-location-dot"></i>#No.178, 4th Block, Further Extension of Vrushabhavathinagar, Thalaghattapura, Bengaluru-560109</a>
+                </li>
+                <li>
+                  <a href="https://api.whatsapp.com/send?phone=917337637433&text=I%20want%20to%20book%20an%20appointment" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+                  </a>
+                </li>
+                
+                
+                
+              </ul>
+            </div>
+      
+            <!-- Social Media -->
+            <div class="bottom__four">
+              <h2>Follow Us</h2>
+              <ul>
+                <li><a href="https://www.facebook.com/medidocsindia/" target="_blank">
+                  <i class="fa-brands fa-facebook"></i> Facebook</a>
+                </li>
+                <li><a href="https://www.linkedin.com/company/medidocsindia/" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                </li>
+                <li><a href="https://www.instagram.com/magnolia.primehealthcare?igsh=MThwd3dhOTY2ZXU2aA==" target="_blank">
+                  <i class="fa-brands fa-instagram"></i> Instagram</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </footer>
+      
+        <!-- Floating Call Button -->
+   <a href="https://wa.me/7337637433" class="floating-call-button">
+    <i class="fa-brands fa-whatsapp"></i> 
+  </a>
+   <!-- EmailJS SDK -->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+   <script>
+     // Initialize EmailJS with your public user ID
+     emailjs.init('j6fvO1x2m2AiBmY7-');  // Replace with your actual public user ID from EmailJS
+   </script>
+      <script type="module" src="script.js"></script>
+  </body> 
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Magnolia Prime Healthcare</title>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav__bar ul');
+            menu.classList.toggle('show');
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .nav__bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px; /* Adjust height as needed */
+            background: var(--clr-one);
+            padding: 1rem 0.1rem; /* Reduce padding if it's too large */
+            z-index: 1; /* Ensures it stays on top */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+            }
+            .nav__bar {
+            display: flex;
+            align-items: center;
+            background-color: #214120; /* Adjust as needed */
+            padding: 10px 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            }
+
+            .logo img {
+            height: 75px; /* Adjust size as needed */
+            width: auto;
+            }
+
+            .logo h2 {
+                font-size: 32px;
+            font-weight: bolder;
+            color: #214120; /* Adjust text color */
+            margin: 0;
+            }
+
+            .nav__bar ul {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+            font-family: "Poppins", sans-serif;
+            font-weight: bolder;
+            margin-right: 40px;
+            }
+            ul li a {
+            color: #ffff;
+            text-decoration: none;
+            }
+
+        p {
+            line-height: 1.6;
+        
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 40px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 50px;
+            color: #214120;
+            margin-bottom: 30px;
+            margin-top: 100px;
+        }
+        .service {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 40px;
+        }
+        .service img {
+            width: 40%;
+            height: 250px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .service:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .service-text {
+            width: 55%;
+            padding: 20px;
+        }
+        
+        .service-text p {
+            text-align: justify;
+        }
+
+        .cta {
+            text-align: center;
+            background: #214120;
+            color: white;
+            padding: 40px 20px;
+            font-size: 20px;
+            margin-top: 40px;
+        }
+
+        /* Hamburger menu styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .hamburger .bar {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+/* Media Queries for responsiveness */
+
+@media only screen and (max-width: 768px) {
+    .nav__bar ul {
+            transition: transform 0.8s ease;
+            position: absolute;
+            top: 90px;
+            width: auto;
+            height: auto;
+            background-color: #214120;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+            .hamburger {
+                display: flex;  /* Show hamburger button in mobile view */
+                margin-right: 25px;
+            }
+
+            .nav__bar ul.show {
+                /*transform: translateX(-100%);*/
+                display: flex;  /* Show the menu when the hamburger is clicked */
+            }
+            .nav__bar {
+                flex-direction: row;
+                position:static;
+                padding: 20px 0;
+                height: auto; /* Allow the navbar to adjust to the content */
+            }
+            
+            
+            .nav__bar ul {
+                display: none;
+                width: 90%;
+                flex-direction: column;
+                align-items: center;
+            }
+
+    .container {
+        width: 90%;
+        margin-top: -100px; /* Adjusted padding-top for smaller screens */
+    }
+    
+
+    /* Ensure every service item stacks vertically */
+    .service {
+        display: flex;
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        margin-bottom: 20px; /* Ensure space between each service */
+    }
+    .service:nth-child(even) {
+        flex-direction: column; /* Ensure even services stack vertically too */
+    }
+
+    /* Image styling */
+    .service img {
+        width: 100%; /* Make image responsive */
+        max-width: 320px; /* Restrict max image width */
+        height: auto;
+        margin-bottom: 20px; /* Space between image and text */
+    }
+
+    /* Text styling */
+    .service-text {
+        width: 100%; /* Ensure text takes full width */
+        padding: 15px;
+        text-align: center; /* Center-align the text */
+    }
+
+    .section-title {
+        font-size: 30px;
+        margin-top: 80px;
+    }
+
+    .cta {
+        padding: 20px 10px;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .section-title {
+        font-size: 24px;
+    }
+
+    .service {
+        padding: 10px;
+    }
+
+    .service img {
+        width: 90%; /* Make the image fit better on very small screens */
+        max-width: 300px;
+        height: auto;
+    }
+
+    .service-text {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .cta {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .nav__bar ul {
+        gap: 1.5rem;
+        font-size: 16px;
+    }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav__bar">
+        <div class="logo">
+            <img src="image/magnolia logo.png" alt="Magnolia Logo" class="logo__image">
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="doctor.html">Doctor</a></li>
+            <li><a href="index.html#Book Appointment">Book Appointment</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+</header>
+
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+
+        <div class="service">
+            <img src="image/Rehabilitation Programs.jpg" alt="Rehabilitation Programs">
+            <div class="service-text">
+                <h2>Rehabilitation Programs</h2>
+                <p>Rehabilitation programs focus on restoring physical strength, cognitive function, 
+                    and emotional well-being after injury, illness, or surgery. They include physiotherapy, 
+                    occupational therapy, and psychological support tailored to individual needs. 
+                    These programs help patients regain mobility, improve daily functioning, and enhance their quality of life. 
+                    Specialized rehabilitation is available for stroke recovery, post-surgical care, neurological conditions, and musculoskeletal disorders.</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <img src="image/Neuro Rehabilitation.jpg" alt="Neuro Rehabilitation">
+            <div class="service-text">
+                <h2>Neuro Rehabilitation</h2>
+                <p>Neuro rehabilitation is a specialized program designed to help individuals recover from neurological conditions such as stroke, 
+                    brain injury, spinal cord disorders, and multiple sclerosis. It includes physiotherapy, speech therapy, cognitive therapy, 
+                    and occupational therapy to improve mobility, coordination, and overall brain function. The goal is to enhance independence, 
+                    restore lost abilities, and improve the patient’s quality of life. Personalized treatment plans ensure targeted support based on the severity of the condition</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <img src="image/Nephro Rehabilitation.jpg" alt="Nephro Rehabilitation">
+            <div class="service-text">
+                <h2>Nephro Rehabilitation</h2>
+                <p>Nephro rehabilitation is a supportive program designed for patients with chronic kidney disease (CKD) or those recovering from kidney-related conditions. 
+                    It focuses on lifestyle modifications, dietary management, and physical therapy to enhance kidney function and overall well-being. 
+                    The program also includes patient education on dialysis, medication adherence, and strategies to prevent disease progression. 
+                    Regular monitoring and a multidisciplinary approach help improve the patient’s quality of life and reduce complications</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <img src="image/Orthopaedic Rehabilitation.jpg" alt="Orthopaedic Rehabilitation">
+            <div class="service-text">
+                <h2>Orthopaedic Rehabilitation</h2>
+                <p>Orthopaedic rehabilitation is a specialized therapy program designed for patients recovering from musculoskeletal injuries, fractures, or surgeries like joint replacements. 
+                    It focuses on pain management, mobility restoration, and strengthening exercises to improve overall function. The program includes physiotherapy, manual therapy, 
+                    and assistive techniques to enhance flexibility and reduce stiffness. Personalized treatment plans help patients regain independence and prevent future injuries</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <img src="image/Alzheimer’s Rehabilitation.jpg" alt="Alzheimer’s Rehabilitation">
+            <div class="service-text">
+                <h2>Alzheimer’s Rehabilitation</h2>
+                <p>Alzheimer’s rehabilitation focuses on improving cognitive function, maintaining daily living skills, and enhancing the quality of life for patients with Alzheimer’s disease. 
+                    It includes memory exercises, physical therapy, and structured routines to slow cognitive decline. Caregivers are also trained to provide emotional and practical support. 
+                    The goal is to ensure a safe, comfortable environment while promoting independence for as long as possible</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <img src="image/stroke management.jpg" alt="Stroke Management">
+            <div class="service-text">
+                <h2>Stroke Management</h2>
+                <p>Stroke management involves immediate medical intervention, rehabilitation, and long-term care to aid recovery and prevent complications. 
+                    Rehabilitation focuses on restoring mobility, speech, and cognitive functions through physiotherapy, occupational therapy, and speech therapy. 
+                    Lifestyle modifications, including a healthy diet, exercise, and medication, help reduce the risk of recurrent strokes. 
+                    Emotional and psychological support is also essential for improving the patient’s overall well-being and independence</p>
+            </div>
+        </div>
+        
+        <div class="service">
+            <img src="image/senior care and assisted living.jpg" alt="Senior Care & Assisted Living">
+            <div class="service-text">
+                <h2>Senior Care & Assisted Living</h2>
+                <p>Senior Care & Assisted Living provides personalized support for elderly individuals who require daily assistance with activities like bathing, dressing, 
+                    and medication management. It includes medical supervision, nutritious meals, social engagement, and a safe living environment to enhance their quality of life. 
+                    These services promote independence while ensuring access to healthcare and companionship. Specialized care is also available for seniors with conditions like dementia or mobility challenges</p>
+            </div>
+        </div>
+        
+        <div class="service">
+            <img src="image/Transitional care.jpg" alt="Transitional Care">
+            <div class="service-text">
+                <h2>Transitional Care</h2>
+                <p>Transitional Care focuses on ensuring a smooth shift from hospital to home or another healthcare setting by providing continued medical supervision and rehabilitation support. 
+                    It helps reduce hospital readmissions by offering personalized care plans, medication management, and therapy services. The goal is to enhance recovery, improve patient outcomes, 
+                    and support families in managing post-hospitalization care. This service is especially beneficial for individuals recovering from surgery, chronic illness, or major medical events like strokes</p>
+            </div>
+        </div>
+        
+        <div class="service">
+            <img src="image/continuum care.jpg" alt="Continuum Care">
+            <div class="service-text">
+                <h2>Continuum Care</h2>
+                <p>Continuum Care provides seamless and coordinated healthcare services across different stages of a patient's journey, ensuring consistent medical support. 
+                    It includes preventive care, acute treatment, rehabilitation, and long-term management to enhance overall well-being. 
+                    This approach helps patients receive personalized care without disruption, improving recovery and quality of life. 
+                    It is particularly beneficial for those with chronic conditions, elderly patients, and individuals requiring long-term healthcare assistance</p>
+            </div>
+        </div>
+        
+        <div class="service">
+            <img src="image/Palliative Care.jpg" alt="Palliative Care">
+            <div class="service-text">
+                <h2>Palliative Care</h2>
+                <p>Palliative care focuses on improving the quality of life for individuals with serious or life-limiting illnesses by managing pain, symptoms, 
+                    and emotional distress. It provides holistic support, including medical, psychological, and spiritual care, tailored to the patient’s needs. 
+                    This care can be given alongside curative treatments or as end-of-life support. The goal is to ensure comfort, dignity, and enhanced well-being for patients and their families</p>
+            </div>
+        </div>
+        
+        <div class="service">
+            <img src="image/physiotherapy opd.jpg" alt="Physiotherapy OPD">
+            <div class="service-text">
+                <h2>Physiotherapy OPD</h2>
+                <p>Magnolia’s Physiotherapy OPD offers specialized outpatient physiotherapy services to help patients recover from injuries, surgeries, 
+                    and musculoskeletal conditions. Our experienced physiotherapists provide personalized treatment plans, including manual therapy, 
+                    therapeutic exercises, and pain management techniques. The focus is on restoring mobility, improving strength, and enhancing overall physical function.
+                    Whether it's post-surgical rehabilitation or chronic pain management, our OPD services ensure effective and continuous care for all patients</p>
+            </div>
+        </div>
+        
+        <div class="service">
+            <img src="image/Laboratory Services.jpg" alt="Laboratory Services">
+            <div class="service-text">
+                <h2>Laboratory Services</h2>
+                <p>Magnolia’s Laboratory Services offer state-of-the-art diagnostic testing to ensure accurate and timely health assessments. 
+                    Our advanced lab facilities provide a wide range of tests, including blood tests, urine analysis, and specialized screenings for various medical conditions. 
+                    With highly skilled technicians and cutting-edge technology, we ensure precise results to aid in early diagnosis and effective treatment planning. 
+                    Our services are designed for patient convenience, offering quick turnaround times and reliable reports</p>
+            </div>
+        </div>
+        
+        <div class="service">
+            <img src="image/Sleep Study.jpg" alt="Sleep Study">
+            <div class="service-text">
+                <h2>Sleep Study</h2>
+                <p>Magnolia’s Sleep Study services help diagnose and manage sleep disorders such as sleep apnea, insomnia, and restless leg syndrome. 
+                    Using advanced monitoring techniques, we assess brain activity, breathing patterns, heart rate, and oxygen levels during sleep. 
+                    Our expert team analyzes the results to create personalized treatment plans for better sleep quality and overall health. 
+                    With a focus on patient comfort, we ensure a seamless and accurate diagnostic experience</p>
+            </div>
+        </div>
+        
+        <div class="service">
+            <img src="image/post surgical care.jpg" alt="post-surgical care">
+            <div class="service-text">
+                <h2>Post Surgical Care</h2>
+                <p>Post-surgical care is a critical aspect of recovery that involves comprehensive management to prevent complications and ensure optimal healing. It includes wound care, pain management, infection prevention, and rehabilitation through physiotherapy if necessary. Monitoring vital signs, managing medications, and providing nutritional support are essential to promote tissue repair and immune function. Depending on the type of surgery, specialized care may involve drain management, mobility assistance, or respiratory therapy to prevent issues like pneumonia or blood clots. Patient education on self-care, recognizing warning signs of complications, and regular follow-ups with the healthcare provider play a key role in successful recovery.</p>
+            </div>
+        </div>   
+
+        <div class="service">
+            <img src="image/joint replacement.jpg" alt="Joint replacement">
+            <div class="service-text">
+                <h2>Joint Replacement</h2>
+                <p>Magnolia Health Care Centre specializes in joint replacement procedures using advanced techniques to restore mobility and reduce pain. The center employs minimally invasive methods and robotic-assisted surgery for greater precision and faster recovery. A dedicated team of orthopedic surgeons, physiotherapists, and pain management specialists ensures personalized treatment plans tailored to each patient. Post-surgical rehabilitation focuses on strengthening the joint and improving function, promoting a smooth and effective recovery. With state-of-the-art technology and patient-centric care, the center is committed to delivering high-quality joint replacement services.</p>
+            </div>
+        </div>  
+
+        <div class="service">
+            <img src="image/hip replacement.jpg" alt="Hip Replacement">
+            <div class="service-text">
+                <h2>Hip Replacement</h2>
+                <p>Hip replacement at Magnolia Health Care Centre is performed using advanced surgical techniques to relieve pain and restore mobility. The procedure involves replacing the damaged hip joint with a prosthetic implant, ensuring improved function and long-term durability. The center offers minimally invasive and robotic-assisted hip replacement for reduced recovery time and enhanced precision. A team of experienced orthopedic surgeons, physiotherapists, and rehabilitation specialists provides comprehensive preoperative assessment and post-surgical care. Personalized rehabilitation programs focus on pain management, strengthening, and restoring movement, ensuring a smooth recovery and improved quality of life.</p>
+            </div>
+        </div> 
+        
+        <div class="service">
+            <img src="image/accident trauma surgical care.jpg" alt="Accident trauma surgeries">
+            <div class="service-text">
+                <h2>Accident Trauma Surgeries</h2>
+                <p>Accident trauma surgeries at Magnolia Health Care Centre focus on the immediate and specialized treatment of severe injuries resulting from accidents. The center is equipped with advanced surgical facilities and a multidisciplinary team of trauma specialists, orthopedic surgeons, and critical care experts. Emergency procedures include fracture fixation, soft tissue reconstruction, and complex trauma management to restore function and prevent complications. The use of modern techniques such as minimally invasive surgery and robotic-assisted procedures ensures faster recovery and reduced postoperative risks. Comprehensive rehabilitation programs, including physiotherapy and pain management, support patients in regaining mobility and resuming daily activities effectively.</p>
+            </div>
+        </div> 
+
+        <div class="service">
+            <img src="image/knee replacement.jpg" alt="Knee Replacement">
+            <div class="service-text">
+                <h2>Knee Replacement</h2>
+                <p>Knee replacement at Magnolia Health Care Centre is a specialized procedure designed to relieve pain and restore mobility for patients with severe knee joint damage. The center offers both partial and total knee replacement using advanced techniques, including minimally invasive and robotic-assisted surgery, ensuring precision and faster recovery. Experienced orthopedic surgeons use high-quality implants to improve joint function and longevity. The procedure is followed by a structured rehabilitation program, including physiotherapy and pain management, to help patients regain strength and mobility. With state-of-the-art facilities and personalized care, Magnolia Health Care Centre ensures optimal outcomes for knee replacement patients.</p>
+            </div>
+        </div> 
+
+        <div class="service">
+            <img src="image/neuro surgical care.jpg" alt="Neuro Surgical Cases">
+            <div class="service-text">
+                <h2>Neuro Surgical Cases</h2>
+                <p>Magnolia Health Care Centre provides advanced neurosurgical care for a wide range of conditions affecting the brain, spine, and peripheral nerves. The center specializes in procedures such as brain tumor removal, spinal decompression, aneurysm clipping, trauma-related surgeries, and minimally invasive spine surgeries. Expert neurosurgeons utilize state-of-the-art imaging and surgical techniques to ensure precision and improved patient outcomes. Post-surgical rehabilitation, including physiotherapy and neurological recovery programs, is integrated to enhance recovery and restore function. With a dedicated team and cutting-edge technology, the center offers comprehensive care for complex neurosurgical cases.</p>
+            </div>
+        </div> 
+
+        <div class="cta">
+            <p>Want to know more about our services? <a href="contact.html" style="color: #ffd700;">Contact us today</a> 
+                to schedule an appointment.</p>
+        </div>
+    </div>
+
+</body>
+</html>
