@@ -159,7 +159,7 @@ function sendEmailToUser(name, email, number, date, timeSlot) {
     timeSlot: timeSlot
   };
 
-  emailjs.send("service_fx8iwff", "template_45riloh", userEmailTemplateParams)
+  emailjs.send("Service ID", "user Template ID", userEmailTemplateParams)
     .then((response) => {
       console.log("User email sent successfully:", response);
       showPopup(); // Show the popup after successful email
@@ -179,7 +179,7 @@ function sendEmailToAdmin(name, email, number, date, timeSlot) {
     timeSlot: timeSlot
   };
 
-  emailjs.send("service_fx8iwff", "template_cw2et4m", adminEmailTemplateParams)
+  emailjs.send("Service ID", "Admin Template ID", adminEmailTemplateParams)
     .then((response) => {
       console.log("Admin email sent successfully:", response);
     })
